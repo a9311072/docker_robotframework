@@ -20,19 +20,13 @@ Open Chrome Browser
     Call Method    ${options}    add_experimental_option    prefs    ${prefs}
     Create Webdriver    Chrome    chrome_options=${options}
 
-Login
+OpenBrowser
     # Open Browser  ${host}  ${BROWSER}
     # Open Browser   ${host}   headlesschrome
 	[Arguments]    ${width}    ${height}
 	Open Chrome Browser
 	Set Window Size    ${width}    ${height}
 	GoTo    ${host}
-
-	
-Logout
-    Click Element     xpath=//nav/div[4]/img
-    Click Element     xpath=//span[text()='Log out']
-    #verify    css=div.logo
 
 hover
     [Arguments]    ${element}
